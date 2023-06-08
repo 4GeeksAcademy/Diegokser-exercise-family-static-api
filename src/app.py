@@ -45,7 +45,6 @@ def get_member(member_id):
 @app.route ('/members', methods=['POST'])
 def add_member():
     request_body = request.json 
-    print(request_body)
     jackson_family.add_member(request_body)
     return jsonify("Se ha añadido correctamente")
 
